@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">InternEco</string>
+    <string name="remove_ads_for_the">Remove Ads for the</string>
+    <string name="best_experience">Best Experience</string>
+    <string name="s2note">S2Note</string>
+    <string name="lifetime">Lifetime</string>
+    <string name="best_offer">Best Offer</string>
+    <string name="onetime_purchase">Onetime Purchase</string>
+    <string name="_27_99">$27.99</string>
+    <string name="_32_99">$32.99</string>
+    <string name="weekly_payments_auto_renew_cancel_anytime">Weekly payments, auto renew, cancel anytime.</string>
+    <string name="continues">Continue</string>
+    <string name="payment_will_be_charged_to_your_google_play_account_upon_confirmation_of_purchase_subscription_will_automatically_renew_according_to_the_subscription_plan_you_choose_unless_canceled_24_hours_before_the_end_of_the_current_subscription_plan_non_subscribed_users_can_still_use_the_application_however_some_paid_features_may_be_limited_you_can_manage_your_subscription_or_cancel_your_subscription_at_any_time_in">Payment will be charged to your Google Play account upon confirmation of purchase\n Subscription will automatically renew according to the subscription plan you choose unless canceled 24 hours before the end of the current subscription plan\n Non-subscribed users can still use the application however some paid features may be limited\n You can manage your subscription or cancel your subscription at any time in</string>
+    <string name="payment_will_be_charged_to_your_google_play_account_upon_confirmation_of_purchase_subscription_will_automatically_renew_according_to_the_subscription_plan_you_choose_unless_canceled_24_hours_before_the_end_of_the_current_subscription_plan_non_subscribed_users_can_still_use_the_application_however_some_paid_features_may_be_limited_you_can_manage_your_subscription_or_cancel_your_subscription_at_any_time">Payment will be charged to your Google Play account upon confirmation of purchase \nSubscription will automatically renew according to the subscription plan you choose unless canceled 24 hours before the end of the current subscription plan \nNon-subscribed users can still use the application however some paid features may be limited \nYou can manage your subscription or cancel your subscription at any time in</string>
+</resources>
