@@ -21,85 +21,109 @@
             android:layout_height="match_parent"
             tools:ignore="ScrollViewSize">
 
-            <include
-                android:id="@+id/appbarLayout"
-                layout="@layout/app_bar" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/img"
+                app:layout_constraintDimensionRatio="40:40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.1"
+                app:srcCompat="@drawable/vector" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:text="@string/s2note"
+                android:textColor="#313131"
+                android:textSize="@dimen/_24sdp"
+                app:layout_constraintEnd_toStartOf="@id/imgClose"
+                app:layout_constraintStart_toEndOf="@id/imgLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:src="@drawable/delete"
+                app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img"
-                android:layout_width="@dimen/_200sdp"
-                android:layout_height="@dimen/_188sdp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:src="@drawable/asset"
+                app:layout_constraintDimensionRatio="203:188"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.45"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appbarLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+                app:layout_constraintWidth_percent="0.6" />
 
-            <!--        <androidx.appcompat.widget.AppCompatTextView-->
-            <!--            android:id="@+id/tv2"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_marginTop="@dimen/_25sdp"-->
-            <!--            android:fontFamily="@font/nunito_sans_bold"-->
-            <!--            android:text="@string/remove_ads_for_the"-->
-            <!--            android:textColor="#313131"-->
-            <!--            android:textSize="@dimen/_22sdp"-->
-            <!--            app:layout_constraintEnd_toEndOf="parent"-->
-            <!--            app:layout_constraintStart_toStartOf="parent"-->
-            <!--            app:layout_constraintTop_toBottomOf="@+id/img" />-->
-
-            <FrameLayout
-                android:id="@+id/frameLayout"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img">
+                app:layout_constraintTop_toBottomOf="@id/img" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|bottom"
-                    android:layout_marginBottom="@dimen/_20sdp"
-                    android:src="@drawable/icon" />
-            </FrameLayout>
-
-            <include
-                android:id="@+id/includePurchase1"
-                layout="@layout/item_purchase"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_32sdp"
                 android:layout_marginEnd="@dimen/_32sdp"
+                android:background="@drawable/bg_card_border_before"
+                android:padding="@dimen/_16sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/frameLayout" />
+                app:layout_constraintTop_toBottomOf="@id/tv3">
 
-            <include
-                android:id="@+id/includePurchase2"
-                layout="@layout/item_purchase"
+                <include
+                    android:id="@+id/includePurchase1"
+                    layout="@layout/item_purchase"
+                    android:tag="include_purchase_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_32sdp"
+                android:background="@drawable/bg_card_border_before"
+                android:padding="@dimen/_16sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/includePurchase1" />
+                app:layout_constraintTop_toBottomOf="@id/item1">
 
-            <TextView
+                <include
+                    android:id="@+id/includePurchase2"
+                    layout="@layout/item_purchase"
+                    android:tag="include_purchase_2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPayment"
-                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_40sdp"
                 android:fontFamily="@font/nunito_sans_regular"
@@ -108,29 +132,28 @@
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/includePurchase2" />
+                app:layout_constraintTop_toBottomOf="@id/item2"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnContinue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_32sdp"
                 android:background="@drawable/button_gradient"
                 android:fontFamily="@font/nunito_sans_semi_bold"
-                android:paddingTop="@dimen/_14sdp"
-                android:paddingBottom="@dimen/_14sdp"
+                android:gravity="center"
                 android:text="@string/continues"
                 android:textAllCaps="false"
                 android:textColor="@color/background_color"
                 android:textSize="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.07"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvPayment" />
+                app:layout_constraintTop_toBottomOf="@id/tvPayment"
+                app:layout_constraintWidth_percent="0.8" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_16sdp"
                 android:layout_marginTop="@dimen/_12sdp"
@@ -140,7 +163,8 @@
                 android:textSize="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnContinue" />
+                app:layout_constraintTop_toBottomOf="@id/btnContinue"
+                app:layout_constraintWidth_percent="0.85" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
