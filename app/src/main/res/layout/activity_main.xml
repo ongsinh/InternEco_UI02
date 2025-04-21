@@ -5,13 +5,6 @@
     android:id="@+id/main"
     tools:context=".MainActivity">
 
-    <data>
-
-        <variable
-            name="someTrigger"
-            type="String" />
-    </data>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -24,18 +17,18 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgLogo"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_4sdp"
-                app:layout_constraintBottom_toTopOf="@+id/img"
-                app:layout_constraintDimensionRatio="40:40"
+                app:layout_constraintBottom_toTopOf="@+id/imgApp"
+                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.1"
                 app:srcCompat="@drawable/vector" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv1"
+                android:id="@+id/tvNote"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_8sdp"
@@ -44,56 +37,78 @@
                 android:text="@string/s2note"
                 android:textColor="#313131"
                 android:textSize="@dimen/_24sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
                 app:layout_constraintEnd_toStartOf="@id/imgClose"
                 app:layout_constraintStart_toEndOf="@id/imgLogo"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/imgLogo" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgClose"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_12sdp"
                 android:src="@drawable/delete"
-                app:layout_constraintBottom_toBottomOf="@id/imgLogo"
+                app:layout_constraintBottom_toBottomOf="@id/tvNote"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/tvNote" />
 
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img"
+                android:id="@+id/imgApp"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="@dimen/_25sdp"
-                android:src="@drawable/asset"
                 app:layout_constraintDimensionRatio="203:188"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-                app:layout_constraintWidth_percent="0.6" />
+                app:layout_constraintWidth_percent="0.6"
+                app:srcCompat="@drawable/asset" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv3"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvRemove"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/nunito_sans_bold"
                 android:gravity="center"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="@string/remove_ads_for_the"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/img" />
+                app:layout_constraintTop_toBottomOf="@id/imgApp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="@string/best_experience"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/_30sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRemove" />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/item1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_32sdp"
-                android:layout_marginTop="@dimen/_32sdp"
-                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
                 android:background="@drawable/bg_card_border_before"
                 android:padding="@dimen/_16sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv3">
+                app:layout_constraintTop_toBottomOf="@id/tvBest">
 
                 <include
                     android:id="@+id/includePurchase1"
@@ -105,13 +120,11 @@
                 android:id="@+id/item2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_32sdp"
                 android:background="@drawable/bg_card_border_before"
                 android:padding="@dimen/_16sdp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/item1"
+                app:layout_constraintStart_toStartOf="@id/item1"
                 app:layout_constraintTop_toBottomOf="@id/item1">
 
                 <include
@@ -122,22 +135,22 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPayment"
-                android:gravity="center"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_40sdp"
                 android:fontFamily="@font/nunito_sans_regular"
                 android:text="@string/weekly_payments_auto_renew_cancel_anytime"
+                android:textAlignment="center"
                 android:textColor="#313131"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/item2"/>
+                app:layout_constraintTop_toBottomOf="@id/item2" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnContinue"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:background="@drawable/button_gradient"
                 android:fontFamily="@font/nunito_sans_semi_bold"
@@ -147,7 +160,6 @@
                 android:textColor="@color/background_color"
                 android:textSize="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_percent="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvPayment"
                 app:layout_constraintWidth_percent="0.8" />
@@ -159,6 +171,7 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:fontFamily="@font/nunito_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
                 android:text="@string/payment_will_be_charged_to_your_google_play_account_upon_confirmation_of_purchase_subscription_will_automatically_renew_according_to_the_subscription_plan_you_choose_unless_canceled_24_hours_before_the_end_of_the_current_subscription_plan_non_subscribed_users_can_still_use_the_application_however_some_paid_features_may_be_limited_you_can_manage_your_subscription_or_cancel_your_subscription_at_any_time"
                 android:textSize="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
