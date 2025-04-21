@@ -16,6 +16,14 @@ class MainActivity : AppCompatActivity() {
 
         setupIncludeTextView()
         handleItemClick()
+        onClick()
+    }
+
+    private fun onClick() {
+        binding.btnContinue.setOnClickListener {
+            val bottomSheet = BottomSheetFragment()
+            bottomSheet.show(supportFragmentManager, "BottomSheet")
+        }
     }
 
     private fun setupIncludeTextView() {
@@ -51,4 +59,6 @@ class MainActivity : AppCompatActivity() {
             item2.setBackgroundResource(if (isCheck) R.drawable.bg_card_border_before else R.drawable.bg_card_border)
         }
     }
+
+
 }

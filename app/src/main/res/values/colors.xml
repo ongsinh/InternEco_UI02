@@ -6,4 +6,6 @@
     <color name="background_color">#FFFFFF</color>
     <color name="text_color_primary">#FF9616</color>
     <color name="text_color_second">#888888</color>
+    <color name="text_color_task2">#F34732</color>
+    <color name="background_color_2">#ECECEC</color>
 </resources>
