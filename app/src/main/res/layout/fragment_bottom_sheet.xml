@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -14,12 +13,14 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_6sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintWidth_percent="0.072"
                 app:srcCompat="@drawable/ic_delete" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -28,9 +29,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:autoSizeMaxTextSize="@dimen/_28sdp"
-                android:autoSizeMinTextSize="@dimen/_15sdp"
-                android:autoSizeTextType="uniform"
+                app:autoSizeMaxTextSize="@dimen/_28sdp"
+                app:autoSizeMinTextSize="@dimen/_16sdp"
+                app:autoSizeTextType="uniform"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
                 android:includeFontPadding="false"
@@ -42,8 +43,7 @@
                 android:textSize="@dimen/_28sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="UnusedAttribute" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvAllPremium"
@@ -65,7 +65,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/item1"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_40sdp"
                 android:background="@drawable/background_top_gray"
                 android:orientation="vertical"
@@ -85,19 +85,21 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imgLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
                 app:layout_constraintBottom_toBottomOf="@id/item1"
                 app:layout_constraintEnd_toStartOf="@id/item2"
                 app:layout_constraintStart_toEndOf="@id/item1"
                 app:layout_constraintTop_toTopOf="@id/item1"
+                app:layout_constraintDimensionRatio="22:20"
+                app:layout_constraintWidth_percent="0.06"
                 app:srcCompat="@drawable/print" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/item2"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_45sdp"
                 android:background="@drawable/background_item_2"
                 android:orientation="vertical"
@@ -117,12 +119,12 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginBottom="-8dp"
+                android:layout_marginBottom="@dimen/_minus10sdp"
                 app:layout_constraintBottom_toTopOf="@id/item2"
                 app:layout_constraintDimensionRatio="119:41"
                 app:layout_constraintEnd_toEndOf="@id/item2"
                 app:layout_constraintStart_toStartOf="@id/item2"
-                app:layout_constraintWidth_percent="0.32"
+                app:layout_constraintWidth_percent="0.35"
                 app:srcCompat="@drawable/gift" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -130,14 +132,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_26sdp"
-                android:autoSizeMaxTextSize="@dimen/_14sdp"
-                android:autoSizeMinTextSize="@dimen/_10sdp"
-                android:autoSizeTextType="uniform"
                 android:background="@drawable/button_gradient2"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:maxLines="1"
                 android:paddingHorizontal="@dimen/_4sdp"
                 android:paddingVertical="@dimen/_14sdp"
                 android:text="@string/claim_offer_now"
@@ -147,8 +145,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/item1"
-                app:layout_constraintWidth_percent="0.91"
-                tools:ignore="UnusedAttribute" />
+                app:layout_constraintWidth_percent="0.91" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvFreeDay"
@@ -184,5 +181,5 @@
                 app:layout_constraintStart_toStartOf="@id/tvFreeDay"
                 app:layout_constraintTop_toBottomOf="@id/tvFreeDay" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </layout>

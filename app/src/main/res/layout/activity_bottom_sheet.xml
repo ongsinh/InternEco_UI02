@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_bottom_sheet">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.072"
+                    app:srcCompat="@drawable/ic_delete" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvClaim"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/claim_30_off"
+                    android:textColor="@color/text_color_task2"
+                    android:textSize="@dimen/_28sdp"
+                    app:autoSizeMaxTextSize="@dimen/_28sdp"
+                    app:autoSizeMinTextSize="@dimen/_16sdp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAllPremium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/_2sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/all_premium"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvClaim" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:background="@drawable/background_top_gray"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_1sdp"
+                    app:layout_constraintDimensionRatio="104:126"
+                    app:layout_constraintEnd_toStartOf="@id/imgLogo"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAllPremium"
+                    app:layout_constraintWidth_percent="0.288">
+
+                    <include
+                        android:id="@+id/includedGift1"
+                        layout="@layout/item_gift" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/item1"
+                    app:layout_constraintDimensionRatio="22:20"
+                    app:layout_constraintEnd_toStartOf="@id/item2"
+                    app:layout_constraintStart_toEndOf="@id/item1"
+                    app:layout_constraintTop_toTopOf="@id/item1"
+                    app:layout_constraintWidth_percent="0.06"
+                    app:srcCompat="@drawable/print" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:background="@drawable/background_item_2"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_1sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/item1"
+                    app:layout_constraintDimensionRatio="104:126"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgLogo"
+                    app:layout_constraintTop_toBottomOf="@id/tvAllPremium"
+                    app:layout_constraintWidth_percent="0.288">
+
+                    <include
+                        android:id="@+id/includedGift2"
+                        layout="@layout/item_gift" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/_minus10sdp"
+                    app:layout_constraintBottom_toTopOf="@id/item2"
+                    app:layout_constraintDimensionRatio="119:41"
+                    app:layout_constraintEnd_toEndOf="@id/item2"
+                    app:layout_constraintStart_toStartOf="@id/item2"
+                    app:layout_constraintWidth_percent="0.35"
+                    app:srcCompat="@drawable/gift" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClaim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:background="@drawable/button_gradient2"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_14sdp"
+                    android:text="@string/claim_offer_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/background_color"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item1"
+                    app:layout_constraintWidth_percent="0.91" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFreeDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/text_day_free"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="@dimen/_10sdp"
+                    app:fontFamily="@font/roboto_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnClaim" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPolicy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingVertical="@dimen/_1sdp"
+                    android:text="@string/text_policy"
+                    android:textColor="@color/text_color_policy"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="@id/tvFreeDay"
+                    app:layout_constraintStart_toStartOf="@id/tvFreeDay"
+                    app:layout_constraintTop_toBottomOf="@id/tvFreeDay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

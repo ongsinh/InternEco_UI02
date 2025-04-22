@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClick() {
         binding.btnContinue.setOnClickListener {
-            val bottomSheet = BottomSheetFragment()
-            bottomSheet.show(supportFragmentManager, "BottomSheet")
+//            val bottomSheet = BottomSheetFragment()
+//            bottomSheet.show(supportFragmentManager, "BottomSheet")
 
-//            val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet, null)
-//            val dialog = BottomSheetDialog(this)
-//            setContentView(view)
-//            dialog.show()
+            val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet, null)
+            val dialog = BottomSheetDialog(this)
+            dialog.setContentView(view)
+            dialog.show()
 
         }
     }
