@@ -1,6 +1,5 @@
 package com.example.interneco
 
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -35,11 +34,11 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
 
         val spannable = SpannableString(fullText)
 
-        val termsStart = fullText.indexOf("Terms")
-        val termsEnd = termsStart + "Terms".length
+        val termsStart = fullText.indexOf(getString(R.string.terms))
+        val termsEnd = termsStart + R.string.terms.toString().length
 
-        val privacyStart = fullText.indexOf("Privacy policies")
-        val privacyEnd = privacyStart + "Privacy policies".length
+        val privacyStart = fullText.indexOf(getString(R.string.privacy_policies))
+        val privacyEnd = privacyStart + R.string.privacy_policies.toString().length
 
         val defaultTextColor = binding.tvPolicy.currentTextColor
 

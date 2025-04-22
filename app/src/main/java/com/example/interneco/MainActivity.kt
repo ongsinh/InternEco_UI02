@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.interneco.databinding.ActivityMainBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnContinue.setOnClickListener {
             val bottomSheet = BottomSheetFragment()
             bottomSheet.show(supportFragmentManager, "BottomSheet")
+
+//            val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet, null)
+//            val dialog = BottomSheetDialog(this)
+//            setContentView(view)
+//            dialog.show()
+
         }
     }
 

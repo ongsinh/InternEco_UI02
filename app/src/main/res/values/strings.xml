@@ -17,14 +17,16 @@
     <string name="remove_ads_for">Remove Ads for the\n</string>
     <string name="best_experiences">Best Experience</string>
     <string name="claim_30_off">CLAIM 30% OFF</string>
-    <string name="all_premium_features_amp_no_ads"><![CDATA[All premium features & no ads]]></string>
-    <string name="_1">1</string>
-    <string name="month">Month</string>
-    <string name="_8_99">$8.99</string>
+    <string name="all_premium"><![CDATA[All premium features & no ads]]></string>
+    <string name="text_number">1</string>
+    <string name="text_month">Month</string>
+    <string name="text_price">$8.99</string>
     <string name="claim_offer_now">Claim Offer Now</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="_3_day_free_trial_then_4_99_for_first_week_after_that_auto_renews_at_8_week_cancel_anytime">3-day free trial, then $4.99 for first week. After that, auto-renews at $8/week. Cancel anytime</string>
+    <string name="text_day_free">3-day free trial, then $4.99 for first week. After that, auto-renews at $8/week. Cancel anytime</string>
     <string name="text_policy">By continuing you agree to our Terms and Privacy policies: \n.Subscription gives you access to Vivishow\'s premium features, all ads will be removed. \n.Subscription plans are automatically renewed and can be canceled anytime in Subscriptions on Google Play. \n.You won’t be charged if subscription is canceled before trial period ends. \n.Subscription is not required to use Vivishow.</string>
     <string name="_2_99">$2.99</string>
+    <string name="terms">Terms</string>
+    <string name="privacy_policies">Privacy policies</string>
 </resources>
