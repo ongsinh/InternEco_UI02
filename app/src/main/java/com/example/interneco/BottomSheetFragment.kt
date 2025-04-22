@@ -41,12 +41,19 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         val privacyStart = fullText.indexOf("Privacy policies")
         val privacyEnd = privacyStart + "Privacy policies".length
 
+        val defaultTextColor = binding.tvPolicy.currentTextColor
+
         if (termsStart != -1) {
             spannable.setSpan(object : ClickableSpan() {
                 override fun onClick(widget: View) {
                     Toast.makeText(widget.context, "Clicked Terms", Toast.LENGTH_SHORT).show()
                 }
 
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    ds.isUnderlineText = true
+                    ds.color = defaultTextColor
+                }
             }, termsStart, termsEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
 
@@ -56,11 +63,11 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
                     Toast.makeText(widget.context, "Clicked Privacy", Toast.LENGTH_SHORT).show()
                 }
 
-//                override fun updateDrawState(ds: TextPaint) {
-//                    super.updateDrawState(ds)
-//                    ds.isUnderlineText = true
-//                    ds.color = Color.BLUE
-//                }
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    ds.isUnderlineText = true
+                    ds.color = defaultTextColor
+                }
             }, privacyStart, privacyEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
 
