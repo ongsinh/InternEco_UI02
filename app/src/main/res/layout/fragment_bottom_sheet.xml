@@ -157,7 +157,7 @@
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingVertical="@dimen/_1sdp"
                 android:text="@string/text_policy"
-                android:textColor="@color/text_color"
+                android:textColor="@color/text_color_policy"
                 android:textSize="@dimen/_8sdp"
                 app:layout_constraintEnd_toEndOf="@id/tvFreeDay"
                 app:layout_constraintStart_toStartOf="@id/tvFreeDay"
