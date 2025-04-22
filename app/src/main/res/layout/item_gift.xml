@@ -5,14 +5,22 @@
     <merge tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="@dimen/_28sdp"
+            android:autoSizeMinTextSize="@dimen/_20sdp"
+            android:autoSizeTextType="uniform"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
             android:text="@string/_1"
-            android:textSize="@dimen/_28sdp" />
+            android:textSize="@dimen/_28sdp"
+            tools:ignore="UnusedAttribute" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMonth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -29,13 +37,20 @@
             tools:ignore="UnusedAttribute" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="@dimen/_18sdp"
+            android:autoSizeMinTextSize="@dimen/_16sdp"
+            android:autoSizeTextType="uniform"
             android:background="@drawable/background_bottom_white"
             android:fontFamily="@font/roboto_regular"
             android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
             android:paddingVertical="@dimen/_8sdp"
             android:text="@string/_8_99"
-            android:textSize="@dimen/_18sdp" />
+            android:textSize="@dimen/_18sdp"
+            tools:ignore="UnusedAttribute" />
     </merge>
 </layout>

@@ -4,11 +4,11 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/background_bottom_sheet">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -29,6 +29,7 @@
                 android:layout_marginTop="@dimen/_18sdp"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:paddingVertical="@dimen/_2sdp"
                 android:text="@string/claim_30_off"
                 android:textColor="@color/text_color_task2"
@@ -44,6 +45,7 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:fontFamily="@font/roboto_regular"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:paddingHorizontal="@dimen/_2sdp"
                 android:paddingVertical="@dimen/_2sdp"
                 android:text="@string/all_premium_features_amp_no_ads"
@@ -138,6 +140,7 @@
                 android:layout_marginHorizontal="@dimen/_14sdp"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:fontFamily="@font/roboto_regular"
+                android:includeFontPadding="false"
                 android:paddingVertical="@dimen/_2sdp"
                 android:text="@string/_3_day_free_trial_then_4_99_for_first_week_after_that_auto_renews_at_8_week_cancel_anytime"
                 android:textAlignment="center"
@@ -154,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:fontFamily="@font/roboto_regular"
+                android:includeFontPadding="false"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingVertical="@dimen/_1sdp"
                 android:text="@string/text_policy"
