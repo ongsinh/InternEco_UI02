@@ -1,17 +1,14 @@
 package com.example.interneco
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.interneco.databinding.ActivitySlideShow2Binding
+import com.example.interneco.databinding.ActivityPaywallFeatureBinding
 
-class SlideShowActivity2 : AppCompatActivity() {
-    private lateinit var binding : ActivitySlideShow2Binding
+class PayWallFeature : AppCompatActivity() {
+    private lateinit var binding : ActivityPaywallFeatureBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySlideShow2Binding.inflate(layoutInflater)
+        binding = ActivityPaywallFeatureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        setupUI()
 //        handleItemClick()

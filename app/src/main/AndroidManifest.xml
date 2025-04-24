@@ -13,10 +13,10 @@
         android:theme="@style/Theme.InternEco"
         tools:targetApi="31">
         <activity
-            android:name=".SlideShowActivity2"
+            android:name=".PayWallFeature"
             android:exported="false" />
         <activity
-            android:name=".SlideShowActivity"
+            android:name=".PayWallActivity"
             android:exported="true"
             android:theme="@style/Theme.InternEco">
             <intent-filter>
