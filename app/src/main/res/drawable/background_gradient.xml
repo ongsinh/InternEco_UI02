@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Lớp Stroke Gradient -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="45"
+                android:endColor="#FF6544"
+                android:startColor="#E5241C"
+                android:type="linear" />
+            <corners android:radius="@dimen/_8sdp" />
+        </shape>
+    </item>
+
+    <!-- Lớp Background Color -->
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape>
+            <solid android:color="@color/background_color" />
+            <corners android:radius="@dimen/_8sdp" />
+        </shape>
+    </item>
+</layer-list>

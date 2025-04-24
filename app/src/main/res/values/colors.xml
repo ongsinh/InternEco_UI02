@@ -9,4 +9,6 @@
     <color name="text_color_task2">#F34732</color>
     <color name="background_color_2">#ECECEC</color>
     <color name="text_color_policy">#9E9E9E</color>
+    <color name="background_color_slideshow">#3FC600</color>
+    <color name="button_slideshow">#EF9236</color>
 </resources>

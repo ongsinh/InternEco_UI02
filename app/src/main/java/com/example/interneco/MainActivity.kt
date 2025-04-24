@@ -25,10 +25,8 @@ class MainActivity : AppCompatActivity() {
 //            val bottomSheet = BottomSheetFragment()
 //            bottomSheet.show(supportFragmentManager, "BottomSheet")
 
-            val view = layoutInflater.inflate(R.layout.fragment_bottom_sheet, null)
-            val dialog = BottomSheetDialog(this)
-            dialog.setContentView(view)
-            dialog.show()
+            val bottomSheet = MyBottomSheetDialog(this)
+            bottomSheet.show()
 
         }
     }

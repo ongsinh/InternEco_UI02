@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/rbCheck"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:srcCompat="@drawable/check"
+            android:layout_marginVertical="@dimen/_14sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFreeDay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFreeDay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="@string/text_free_day"
+            android:textSize="@dimen/_14sdp"
+            app:autoSizeMaxTextSize="@dimen/_14sdp"
+            app:autoSizeMinTextSize="@dimen/_12sdp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/tvPrice"
+            app:layout_constraintStart_toEndOf="@id/rbCheck"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="@string/text_cancel"
+            android:textSize="@dimen/_10sdp"
+            app:autoSizeMaxTextSize="@dimen/_10sdp"
+            app:autoSizeMinTextSize="@dimen/_8sdp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toStartOf="@+id/tvMonth"
+            app:layout_constraintStart_toStartOf="@+id/tvFreeDay"
+            app:layout_constraintTop_toBottomOf="@+id/tvFreeDay" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="@string/text_price_slideshow"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/_14sdp"
+            app:autoSizeMaxTextSize="@dimen/_14sdp"
+            app:autoSizeMinTextSize="@dimen/_12sdp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFreeDay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            android:text="@string/per_with_month"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="italic"
+            app:autoSizeMaxTextSize="@dimen/_10sdp"
+            app:autoSizeMinTextSize="@dimen/_8sdp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvCancel"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+    </merge>
+</layout>

@@ -22,7 +22,10 @@ class BottomSheetActivity : AppCompatActivity() {
         bottomSheetBehavior = BottomSheetBehavior.from(binding.bottomSheet)
 
         //set status default
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-
+        bottomSheetBehavior.apply {
+            state = BottomSheetBehavior.STATE_COLLAPSED
+            peekHeight = 200
+            isHideable = true
+        }
     }
 }

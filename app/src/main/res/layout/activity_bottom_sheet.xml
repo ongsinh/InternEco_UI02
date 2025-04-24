@@ -6,12 +6,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.core.widget.NestedScrollView
+        <ScrollView
             android:id="@+id/bottomSheet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +31,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvClaim"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:fontFamily="@font/roboto_bold"
@@ -54,16 +53,20 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvAllPremium"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
                     android:includeFontPadding="false"
+                    android:maxLines="1"
                     android:paddingHorizontal="@dimen/_2sdp"
                     android:paddingVertical="@dimen/_2sdp"
                     android:text="@string/all_premium"
                     android:textColor="@color/text_color"
                     android:textSize="@dimen/_16sdp"
+                    app:autoSizeMaxTextSize="@dimen/_16sdp"
+                    app:autoSizeMinTextSize="@dimen/_12sdp"
+                    app:autoSizeTextType="uniform"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvClaim" />
@@ -142,12 +145,16 @@
                     android:fontFamily="@font/roboto_medium"
                     android:gravity="center"
                     android:includeFontPadding="false"
+                    android:maxLines="1"
                     android:paddingHorizontal="@dimen/_4sdp"
                     android:paddingVertical="@dimen/_14sdp"
                     android:text="@string/claim_offer_now"
                     android:textAllCaps="false"
                     android:textColor="@color/background_color"
                     android:textSize="@dimen/_14sdp"
+                    app:autoSizeMaxTextSize="@dimen/_14sdp"
+                    app:autoSizeMinTextSize="@dimen/_12sdp"
+                    app:autoSizeTextType="uniform"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/item1"
@@ -187,6 +194,7 @@
                     app:layout_constraintStart_toStartOf="@id/tvFreeDay"
                     app:layout_constraintTop_toBottomOf="@id/tvFreeDay" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.core.widget.NestedScrollView>
+
+        </ScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
