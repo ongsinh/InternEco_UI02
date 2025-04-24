@@ -71,17 +71,16 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/item1"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_14sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/background_gradient"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_6sdp"
-                app:layout_constraintDimensionRatio="328:65"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNoAds"
-                app:layout_constraintWidth_percent="0.93">
+                app:layout_constraintWidth_percent="0.93"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoAds">
 
                 <include
                     android:id="@+id/includedSlideShow1"
@@ -112,16 +111,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/item2"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/bg_card_slideshow"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_6sdp"
-                app:layout_constraintDimensionRatio="328:65"
                 app:layout_constraintEnd_toEndOf="@id/item1"
                 app:layout_constraintStart_toStartOf="@id/item1"
-                app:layout_constraintTop_toBottomOf="@id/item1"
-                app:layout_constraintWidth_percent="0.93">
+                app:layout_constraintTop_toBottomOf="@id/item1">
 
                 <include
                     android:id="@+id/includedSlideShow2"
@@ -131,16 +128,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/item3"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:background="@drawable/bg_card_slideshow"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_6sdp"
-                app:layout_constraintDimensionRatio="328:65"
                 app:layout_constraintEnd_toEndOf="@id/item2"
                 app:layout_constraintStart_toStartOf="@id/item2"
-                app:layout_constraintTop_toBottomOf="@id/item2"
-                app:layout_constraintWidth_percent="0.93">
+                app:layout_constraintTop_toBottomOf="@id/item2">
 
                 <include
                     android:id="@+id/includedSlideShow3"
@@ -168,8 +163,7 @@
                 app:autoSizeTextType="uniform"
                 app:layout_constraintEnd_toEndOf="@id/item3"
                 app:layout_constraintStart_toStartOf="@id/item3"
-                app:layout_constraintTop_toBottomOf="@id/item3"
-                app:layout_constraintWidth_percent="0.91" />
+                app:layout_constraintTop_toBottomOf="@id/item3" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvLimited"

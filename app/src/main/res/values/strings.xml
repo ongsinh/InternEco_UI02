@@ -25,7 +25,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_day_free">3-day free trial, then $4.99 for first week. After that, auto-renews at $8/week. Cancel anytime</string>
-    <string name="text_policy">By continuing you agree to our Terms and Privacy policies: \n.Subscription gives you access to Vivishow\'s premium features, all ads will be removed. \n.Subscription plans are automatically renewed and can be canceled anytime in Subscriptions on Google Play. \n.You won’t be charged if subscription is canceled before trial period ends. \n.Subscription is not required to use Vivishow.</string>
+    <string name="text_policy">By continuing you agree to our <b>Terms</b> and <b>Privacy policies</b>: \n.Subscription gives you access to Vivishow\'s premium features, all ads will be removed. \n.Subscription plans are automatically renewed and can be canceled anytime in Subscriptions on Google Play. \n.You won’t be charged if subscription is canceled before trial period ends. \n.Subscription is not required to use Vivishow.</string>
     <string name="_2_99">$2.99</string>
     <string name="terms">Terms</string>
     <string name="privacy_policies">Privacy policies</string>
@@ -91,4 +91,7 @@
     <string name="remove_watermark">Remove watermark</string>
     <string name="high_quality_export">High quality export</string>
     <string name="unlock_photo">Unlock 120 photo limit</string>
+    <string name="monthly">Monthly</string>
+    <string name="life_time">Life time</string>
+    <string name="one_time_payment">One-time payment</string>
 </resources>

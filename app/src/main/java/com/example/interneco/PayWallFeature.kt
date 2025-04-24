@@ -10,15 +10,13 @@ class PayWallFeature : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPaywallFeatureBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setupUI()
-//        handleItemClick()
     }
 
     private fun handleItemClick() {
-        TODO("Not yet implemented")
+
     }
 
     private fun setupUI() {
-        TODO("Not yet implemented")
+
     }
 }
